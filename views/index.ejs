@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
 </head>
+
 <body>
-    <h1><%= title %></h1>
-    
+    <h1>
+        <%= title %>
+    </h1>
+
+    <ul>
+        <% posts.forEach(function(post){ %>
+            <li>
+                <strong>
+                    <%= post.title %>
+                </strong>
+                <p>
+                    <%= post.description %>
+                </p>
+                <span>Autor: <%= post.author %></span>
+            </li>
+
+            <% }); %>
+    </ul>
     <!-- Mostrar los posts aquí -->
 
 </body>
+
 </html>
